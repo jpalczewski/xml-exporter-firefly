@@ -9,6 +9,7 @@ pylint = "*"
 pprint = "*"
 black = "*"
 pytest = "*"
+codecov = "*"
 
 [packages]
 click = "*"
