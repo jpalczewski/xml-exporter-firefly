@@ -129,3 +129,15 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
+#rest
+history_*.xml
+Pipfile.lock
+.idea/.gitignore
+.idea/inspectionProfiles/
+.idea/misc.xml
+.idea/modules.xml
+.idea/other.xml
+.idea/vcs.xml
+.idea/xml-exporter-firefly.iml
+.vscode
+tester.ipynb

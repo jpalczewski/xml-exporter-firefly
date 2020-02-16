@@ -1,0 +1,25 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+flake8 = "*"
+pylint = "*"
+pprint = "*"
+black = "*"
+
+[packages]
+click = "*"
+firefly-iii-client = {editable = true,git = "https://github.com/ms32035/firefly-iii-client.git"}
+python-dotenv = "*"
+authomatic = "*"
+beautifulsoup4 = "*"
+lxml = "*"
+jupyter = "*"
+
+[requires]
+python_version = "3.8"
+
+[pipenv]
+allow_prereleases = true
