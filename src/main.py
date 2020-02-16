@@ -7,7 +7,7 @@ from dotenv import load_dotenv
 from firefly_iii_client.rest import ApiException
 
 soup = ""
-with open("history_1.xml") as fh:
+with open("../history_1.xml") as fh:
     soup = BeautifulSoup(fh, "xml")
 
 listw = soup.operations.find_all("operation")
