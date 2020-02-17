@@ -9,10 +9,11 @@ class OperationType(Enum):
 
 
 @dataclass
-class ParsedOperation:
+class Operation:
     execDate: str
     orderDate: str
     description: str
     amount: float
     account: str
+    currencyCode: str
     Type: OperationType = field(default=OperationType.UNKNOWN, init=False)
