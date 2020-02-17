@@ -1,8 +1,8 @@
 import pytest
 from bs4 import BeautifulSoup
 
-from ParsedOperation import OperationType
-from parser import parse_operation
+from src.xml_parser.models.ParsedOperation import OperationType
+from src.xml_parser.parser import parse_operation
 
 
 @pytest.fixture()

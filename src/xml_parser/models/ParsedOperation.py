@@ -16,4 +16,3 @@ class ParsedOperation:
     amount: float
     account: str
     Type: OperationType = field(default=OperationType.UNKNOWN, init=False)
-
