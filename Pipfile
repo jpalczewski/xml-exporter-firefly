@@ -10,6 +10,7 @@ pprint = "*"
 black = "*"
 pytest = "*"
 codecov = "*"
+pytest-cov = "*"
 
 [packages]
 click = "*"
