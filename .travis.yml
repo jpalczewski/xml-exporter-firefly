@@ -4,7 +4,6 @@ python:
 install:
   - 'pip install pipenv'
   - 'pipenv install --dev'
-  - 'pipenv install codecov'
-script: 'pipenv run pytest --cov-report=xml '
+script: 'pipenv run pytest --cov-report=xml  --cov=src'
 after_success:
   - codecov
