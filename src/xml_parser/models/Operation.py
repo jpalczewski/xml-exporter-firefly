@@ -1,11 +1,22 @@
 from dataclasses import dataclass, field
-from enum import Enum
+from enum import Enum, auto
 
 
-class OperationType(Enum):
+class OperationDirection(Enum):
     INCOMING = 1
     OUTGOING = 2
     UNKNOWN = 3
+
+
+class OperationType(Enum):
+    BLIK = auto()
+    CARD_PAYMENT = auto()
+    PAYMENT = auto()
+
+
+operationTypeDict = {
+    "Obciążenie": OperationType.PAYMENT
+}
 
 
 @dataclass
@@ -16,4 +27,5 @@ class Operation:
     amount: float
     account: str
     currencyCode: str
-    Type: OperationType = field(default=OperationType.UNKNOWN, init=False)
+    type: str
+    direction: OperationDirection = field(default=OperationDirection.UNKNOWN, init=False)

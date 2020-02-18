@@ -2,7 +2,7 @@ import pytest
 from bs4 import BeautifulSoup
 
 from src.xml_parser.Parser import Parser
-from src.xml_parser.models.Operation import OperationType
+from src.xml_parser.models.Operation import OperationDirection
 
 
 @pytest.fixture()
@@ -35,12 +35,15 @@ def provide_operations():
 def test_parse_operation(provide_operations):
     parser = Parser("1")
     result = parser.parse_operation(provide_operations[0])
-    assert result.Type == OperationType.OUTGOING
+    assert result.direction == OperationDirection.OUTGOING
     assert result.execDate == "2020-02-12"
 
 
 def test_handle_malformed(provide_operations):
+    parser = Parser("1")
     with pytest.raises(ValueError):
-        parser = Parser("1")
         result = parser.parse_operation(provide_operations[1])
         assert result.execDate == "2020-02-12"
+
+    with pytest.raises(TypeError):
+        parser.parse_operation(True)
