@@ -141,3 +141,4 @@ Pipfile.lock
 .idea/xml-exporter-firefly.iml
 .vscode
 tester.ipynb
+*.ipynb
